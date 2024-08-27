@@ -8,9 +8,9 @@ function Question({ ques, hint, score, setQues, setScore, answer }) {
 
   function handleInput(value) {
     arrInp = arrInp + value;
-    console.log(arrInp);
 
-    if (arrInp === answer) {
+
+    if (arrInp.toLocaleLowerCase() === answer) {
       setTimeout(() => {
         alert("Correct");
         arrInp = "";
